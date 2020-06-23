@@ -1,18 +1,9 @@
 #![allow(dead_code)]
 
-#[derive(Debug)]
+#[derive(Debug,Copy,Clone)]
 pub struct Complex {
     pub re: f64,
     pub im: f64,
-}
-
-impl std::clone::Clone for Complex {
-    fn clone(&self) -> Self {
-        Complex {
-            re: self.re,
-            im: self.im,
-        }
-    }
 }
 
 impl std::ops::Add for Complex {
